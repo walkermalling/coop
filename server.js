@@ -21,6 +21,10 @@ var server = http.createServer(app);
 app.set('port', process.env.PORT || 3000);
 exports.port = app.get('port');
 
+// configure routes
+
+require('./routes/transaction-routes')(app);
+
 // start server
 
 server.listen(app.get('port'),function(){

@@ -18,6 +18,7 @@ var coop = angular.module('coop', ['ngRoute']);
 // Controllers
 
 require('./js/controllers/home-controller')(coop);
+require('./js/controllers/transaction-controller')(coop);
 
 // Directives
 
@@ -32,6 +33,10 @@ coop.config([ '$routeProvider', '$locationProvider',
       .when('/', {
         templateUrl: 'views/home-view.html',
         controller: 'homeController'
+      })
+      .when('/transactions', {
+        templateUrl: 'views/transaction-view.html',
+        controller: 'transactionController'
       })
       .otherwise({
         redirectTo: '/'

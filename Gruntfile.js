@@ -17,6 +17,9 @@ module.exports = function(grunt) {
   var allJavaScriptFilePaths = [
     'app/js/**/*.js',
     'app/app.js',
+    'models/*.js',
+    'routes/*.js',
+    'lib/*.js',
     'server.js'
   ];
 

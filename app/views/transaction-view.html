@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/#/transactions">Transactions</a></li>
+    <li><a href="/#/users">Users</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Transactions</h2>
+  <div data-ng-repeat="trx in transactions">
+    <p><a href="/#/transactions?id={{ trx._id }}">{{ trx._id }}</a></p>
+    <p>
+      <span>Provider: </span>
+      <a href="/#/member?id={{ trx.sittingProviderId }}">{{ trx.sittingProviderId }}</a>
+    </p>
+    <p>
+      <span>Receiver: </span>
+      <a href="/#/member?id={{ trx.sittingReceiverId }}">{{ trx.sittingReceiverId }}</a>
+    </p>
+  </div>
+</main>
