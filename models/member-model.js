@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 
 var MemberSchema = mongoose.Schema({
-  memberId: Number,
+  memberId: String,
   stats: {
     points: {type:Number, default:5},
     providerInstances: {type:Number, default:0},
