@@ -24,6 +24,7 @@ exports.port = app.get('port');
 // configure routes
 
 require('./routes/transaction-routes')(app);
+require('./routes/member-routes')(app);
 
 // start server
 
