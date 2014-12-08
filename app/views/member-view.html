@@ -1,6 +1,13 @@
 <main>
   <h2>Members</h2>
-  <div data-ng-repeat="members in members">
-    <p><a href="/#/members?id={{ member._id }}">{{ member._id }}</a></p>
+  <div data-ng-show="singleMember">
+    <p>memberId: {{ singleMember.memberId}}</p>
+    <p>points: {{ singleMember.stats.points}}</p>
+    <p>receiverInstances: {{ singleMember.stats.receiverInstances}}</p>
+    <p>providerInstances: {{ singleMember.stats.providerInstances}}</p>
+  </div>
+  <div data-ng-repeat="member in members">
+    <p><a data-ng-click="getMember(member._id)">{{ member._id }}</a></p>
+    <p>memberId {{ member.memberId }}</p>
   </div>
 </main>

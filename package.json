@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "^4.9.5",
     "moment": "^2.8.3",
-    "mongoose": "^3.8.19"
+    "mongoose": "^3.8.19",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "debowerify": "^0.8.1",
@@ -27,6 +28,7 @@
     "grunt-sass": "~0.16.1",
     "time-grunt": "^1.0.0",
     "app-root-path": "^0.1.0",
-    "xml2js": "~0.4.4"
+    "xml2js": "~0.4.4",
+    "bluebird": "~2.3.11"
   }
 }

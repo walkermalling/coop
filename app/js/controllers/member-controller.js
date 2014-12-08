@@ -6,6 +6,9 @@ module.exports = function(app){
     function($scope, $http) {
 
       $scope.members = {};
+      $scope.singleMember = false;
+
+
       $scope.getAllMembers = function () {
         $http.get('/members')
           .success(function (data) {
@@ -18,6 +21,18 @@ module.exports = function(app){
       };
 
       $scope.getAllMembers();
+
+
+      $scope.getMember = function (id) {
+        $http.get('/members/' + id)
+          .success(function (data) {
+            $scope.singleMember = data;
+          })
+          .error(function (data) {
+            console.log('error fetching member');
+            console.log(data);
+          });
+      };
 
     }
   ]);
