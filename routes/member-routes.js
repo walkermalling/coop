@@ -19,7 +19,7 @@ module.exports = function(app) {
    * Get One Member by ID
    */
   app.get('/members/:id', function (req,res){
-    MemberModel.findOne({'_id' : req.params.id}, function (err, member) {
+    MemberModel.findOne({'memberId' : req.params.id}, function (err, member) {
       if (err) return res.status(500).json(err);
       else res.status(200).send(member);
     });

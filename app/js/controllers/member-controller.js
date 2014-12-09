@@ -4,12 +4,12 @@ var _ = require('lodash');
 
 module.exports = function(app){
 
-  app.controller('memberController', ['$scope', '$http', '$route',
-    function($scope, $http, $route) {
+  app.controller('memberController', ['$scope', '$http',
+    function($scope, $http) {
 
-      $scope.members = {};
-      $scope.singleMember = false;
-
+      /*
+       *  Methods
+       */
 
       $scope.getAllMembers = function () {
         $http.get('/members')
@@ -22,19 +22,12 @@ module.exports = function(app){
           });
       };
 
+
+      /*
+       *  Execution
+       */
+      
       $scope.getAllMembers();
-
-
-      $scope.getMember = function (id) {
-        $http.get('/members/' + id)
-          .success(function (data) {
-            $scope.singleMember = data;
-          })
-          .error(function (data) {
-            console.log('error fetching member');
-            console.log(data);
-          });
-      };
 
     }
   ]);

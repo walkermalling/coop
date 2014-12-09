@@ -18,6 +18,8 @@ var coop = angular.module('coop', ['ngRoute']);
 require('./js/controllers/home-controller')(coop);
 require('./js/controllers/transaction-controller')(coop);
 require('./js/controllers/member-controller')(coop);
+require('./js/controllers/recommendation-controller')(coop);
+
 
 // Directives
 
@@ -40,6 +42,10 @@ coop.config([ '$routeProvider', '$locationProvider',
       .when('/members', {
         templateUrl: 'views/member-view.html',
         controller: 'memberController'
+      })
+      .when('/members/:id', {
+        templateUrl: 'views/recommendation-view.html',
+        controller: 'recommendationController'
       })
       .otherwise({
         redirectTo: '/'
