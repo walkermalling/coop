@@ -1,14 +1,39 @@
 <main>
   <h2>Transactions</h2>
-  <div data-ng-repeat="trx in transactions">
-    <p><a href="/#/transactions?id={{ trx._id }}">{{ trx._id }}</a></p>
-    <p>
-      <span>Provider: </span>
-      <a href="/#/member?id={{ trx.sittingProviderId }}">{{ trx.sittingProviderId }}</a>
-    </p>
-    <p>
-      <span>Receiver: </span>
-      <a href="/#/member?id={{ trx.sittingReceiverId }}">{{ trx.sittingReceiverId }}</a>
-    </p>
-  </div>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Duration</th>
+      <th>Children</th>
+      <th>Point Value</th>
+      <th>ProviderId</th>
+      <th>ReceiverId</th>
+    </tr>
+    <tr data-ng-repeat="trx in transactions">
+      <td>
+        <a href="/#/transactions?id={{ trx._id }}">
+          {{ trx.startedAt | date : 'medium' }}
+        </a>
+      </td>
+      <td>
+        {{ trx.duration }}
+      </td>
+      <td>
+        {{ trx.childrenWatched }}
+      </td>
+      <td>
+        {{ trx.duration * trx.childrenWatched }}
+      </td>
+      <td>
+        <a href="/#/member?id={{ trx.sittingProviderId }}">
+          {{ trx.sittingProviderId }}
+        </a>
+      </td>
+      <td>
+        <a href="/#/member?id={{ trx.sittingReceiverId }}">
+          {{ trx.sittingReceiverId }}
+        </a>
+      </td>
+    </tr>
+  </table>
 </main>

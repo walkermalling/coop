@@ -1,9 +1,11 @@
 'use strict';
 
+var _ = require('lodash');
+
 module.exports = function(app){
 
-  app.controller('memberController', ['$scope', '$http', 
-    function($scope, $http) {
+  app.controller('memberController', ['$scope', '$http', '$route',
+    function($scope, $http, $route) {
 
       $scope.members = {};
       $scope.singleMember = false;
@@ -12,7 +14,7 @@ module.exports = function(app){
       $scope.getAllMembers = function () {
         $http.get('/members')
           .success(function (data) {
-            $scope.members = data;
+            $scope.members = _.sortBy(data, 'memberId');
           })
           .error(function (data) {
             console.log('error fetching members');
