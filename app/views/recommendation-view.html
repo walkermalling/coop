@@ -1,12 +1,37 @@
 <main>
   <h2>Provider Recommendation</h2>
 
-  <div data-ng-if="errs" class="flash-message">
-    <p data-ng-repeat="err in errs">{{ err }}</p>
+  <div data-ng-if="msgs" class="flash-message">
+    <p data-ng-repeat="msg in msgs">{{ err }}</p>
   </div>
 
   <div>
-    {{ member }}
+    <h4>Member</h4>
+    <p>{{ member }}</p>
+  </div>
+
+  <div>
+    <h4>Stats</h4>
+    <p>Frequency: {{ $scope.stats.freq }}</p>
+  </div>
+
+  <div>
+    <h4>Receiver Transactions</h4>
+    <table>
+      <tr>
+        <th><a data-ng-click="sortTrxsBy('sittingProviderId')">Provider</a></th>
+        <th><a data-ng-click="sortTrxsBy('startedAt')">Date</a></th>
+        <th><a data-ng-click="sortTrxsBy('duration')">Duration</a></th>
+        <th><a data-ng-click="sortTrxsBy('childrenWatched')">Children Watched</a></th>
+      </tr>
+      <tr data-ng-repeat="trx in receiverTransactions">
+        <td>{{ trx.sittingProviderId }}</td>
+        <td>{{ trx.startedAt | date : 'medium' }}</td>
+        <td>{{ trx.duration }}</td>
+        <td>{{ trx.childrenWatched }}</td>
+        <td>{{ trx.duration * trx.childrenWatched }}</td>
+      </tr>
+    </table>
   </div>
 
 </main>
