@@ -24,5 +24,8 @@
   "undef": true,
   "unused": true,
   "indent": 2,
-  "node": true
+  "node": true,
+  "laxcomma" : true,
+  "loopfunc" : true,
+  "sub" : true
 }
