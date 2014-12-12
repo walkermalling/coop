@@ -25,6 +25,7 @@ require('./js/controllers/recommendation-controller')(coop);
 
 require('./js/directives/footer-directive')(coop);
 require('./js/directives/header-directive')(coop);
+require('./js/directives/profile-card-directive')(coop);
 
 // Routes
 

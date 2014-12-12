@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 
 var MemberSchema = mongoose.Schema({
   memberId: String,
+  name: {type:String, default: 'M.'},
   stats: {
     points: {type:Number, default:5},
     providerInstances: {type:Number, default:0},

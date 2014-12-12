@@ -21,7 +21,8 @@ h1, h2, h3 {
   margin: 0; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 2em;
+  color: #444; }
 
 p {
   font-size: 1em;
@@ -55,3 +56,43 @@ main {
   border: 0;
   padding: 1em;
   min-height: 5em; }
+
+header {
+  text-align: center;
+  overflow: hidden; }
+
+h1.main-title {
+  display: inline-block;
+  height: 6em;
+  width: 6em;
+  border-radius: 3em;
+  background: #fcc75b;
+  color: white;
+  line-height: 6em;
+  margin-bottom: -1.5em; }
+
+nav {
+  text-align: center; }
+
+nav ul {
+  text-align: center; }
+
+nav li.circle {
+  transition: all 200ms linear;
+  background-color: rgba(65, 131, 196, 0.6);
+  height: 4em;
+  width: 4em;
+  border-radius: 2em;
+  display: inline-block;
+  line-height: 4em;
+  margin: -5px auto; }
+
+nav li.circle:hover {
+  background-color: rgba(65, 131, 196, 0.8); }
+
+nav li.circle a {
+  transition: all 200ms linear;
+  color: #fcc75b; }
+
+nav li.circle:hover a {
+  color: white; }

@@ -10,7 +10,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #4183C4; }
+  color: $anchorBlue; }
 
 a:hover {
   cursor: pointer; }
@@ -21,7 +21,8 @@ h1, h2, h3 {
   margin: 0;}
 
 h1 {
-  font-size: 2em; }
+  font-size: 2em; 
+  color: $grey;}
 
 p {
   font-size: 1em;

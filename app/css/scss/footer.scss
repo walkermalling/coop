@@ -1,0 +1,26 @@
+nav{
+  text-align:center;}
+nav ul{
+  text-align:center;}
+
+nav li.circle{
+  transition: all 200ms linear;
+  background-color:$circleBlue;
+  height:4em;
+  width:4em;
+  border-radius:2em;
+  display:inline-block;
+  line-height: 4em;
+  margin:-5px auto;}
+
+  nav li.circle:hover{
+    background-color:$circleBlueActive;
+  }
+
+nav li.circle a{
+  transition: all 200ms linear;
+  color:$circleOrange;}
+
+  nav li.circle:hover a{
+    color:white;
+  }

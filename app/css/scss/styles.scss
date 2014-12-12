@@ -1,2 +1,10 @@
-$anchorBlue: "#4183C4";
+$anchorBlue: #4183C4;
+$circleBlue: rgba(65,131,196,0.6);
+$circleBlueActive: rgba(65,131,196,0.8);
+$circleOrange: #fcc75b;
+$grey: #444;
+
+
 @import "global.scss";
+@import "header.scss";
+@import "footer.scss";
