@@ -13,6 +13,8 @@ var coop = angular.module('coop', ['ngRoute']);
 
 // Services
 
+require('./js/services/member-server')(coop);
+
 // Controllers
 
 require('./js/controllers/home-controller')(coop);

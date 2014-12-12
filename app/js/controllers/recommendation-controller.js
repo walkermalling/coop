@@ -4,10 +4,10 @@ var _ = require('lodash');
 
 module.exports = function(app){
 
-  app.controller('recommendationController', ['$scope', '$http', '$routeParams',
-    function($scope, $http, $routeParams) {
+  app.controller('recommendationController', 
+    ['$scope', '$http', '$routeParams', 'memberServer',
+    function($scope, $http, $routeParams, memberServer) {
 
-      $scope.msgs = [];
       $scope.user = null;
       $scope.receiverTransactions = null;
       $scope.stats = {};
@@ -17,15 +17,11 @@ module.exports = function(app){
        */
 
       $scope.getMember = function (id) {
-        $http.get('/members/' + id)
+        memberServer.getOne(id)
           .success(function (data) {
             $scope.user = data.member;
             $scope.receiverTransactions = data.receiverTransactions;
             $scope.recommend();
-          })
-          .error(function (err) {
-            $scope.msgs.push('Error fetching member information.');
-            console.log(err);
           });
       };
 
@@ -44,7 +40,6 @@ module.exports = function(app){
        */
       
       if ( $routeParams.id ) $scope.getMember($routeParams.id);
-      else $scope.msgs.push('No member id.');
 
     }
   ]);
