@@ -1,0 +1,39 @@
+div.card-container{
+  width: 20em;
+  height:6em;
+  box-shadow: 1px 1px 1px black;
+  box-style: border-box;}
+
+.card-container div.backsplash{
+  position:absolute;
+  top:3em;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:0;
+  background-color: #413E4A;}
+
+.card-container div.portrait-container{
+  position:absolute;
+  left:1em;
+  bottom:2em;
+  width:4em;
+  height:4em;
+  border-radius:2em;
+  background-color:#B38184;}
+
+  .portrait-container .name{
+    color:white;}
+
+.card-container div.info-container{
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:6em;
+  height:3em;}
+
+  .info-container .points{
+    color:white;}
+
+
+

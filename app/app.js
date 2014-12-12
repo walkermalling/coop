@@ -19,7 +19,7 @@ require('./js/controllers/home-controller')(coop);
 require('./js/controllers/transaction-controller')(coop);
 require('./js/controllers/member-controller')(coop);
 require('./js/controllers/recommendation-controller')(coop);
-
+require('./js/controllers/profile-card-controller')(coop);
 
 // Directives
 
@@ -34,9 +34,9 @@ coop.config([ '$routeProvider', '$locationProvider',
     $routeProvider
       .when('/', {
         templateUrl: 'views/home-view.html',
-        controller: 'homeController'
+        controller: 'recommendationController'
       })
-      .when('/transactions', {
+      .when('/activity', {
         templateUrl: 'views/transaction-view.html',
         controller: 'transactionController'
       })

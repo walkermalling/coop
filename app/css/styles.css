@@ -1,16 +1,16 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-weight: normal;
-  color: #000000;
-  background-color: #eee;
+  color: #161519;
+  background-color: #f9f3e5;
   margin: 0; }
 
 a {
   text-decoration: none;
-  color: #4183C4; }
+  color: #031634; }
 
 a:hover {
   cursor: pointer; }
@@ -63,13 +63,13 @@ header {
 
 h1.main-title {
   display: inline-block;
-  height: 6em;
-  width: 6em;
+  /*  height:6em;
+  width:6em;
   border-radius: 3em;
-  background: #fcc75b;
-  color: white;
-  line-height: 6em;
-  margin-bottom: -1.5em; }
+  background: $teal;*/
+  color: #73626E;
+  font-size: 1.5em;
+  line-height: 4em; }
 
 nav {
   text-align: center; }
@@ -79,7 +79,7 @@ nav ul {
 
 nav li.circle {
   transition: all 200ms linear;
-  background-color: rgba(65, 131, 196, 0.6);
+  background-color: rgba(35, 68, 64, 0.6);
   height: 4em;
   width: 4em;
   border-radius: 2em;
@@ -88,11 +88,48 @@ nav li.circle {
   margin: -5px auto; }
 
 nav li.circle:hover {
-  background-color: rgba(65, 131, 196, 0.8); }
+  background-color: rgba(35, 68, 64, 0.85); }
 
 nav li.circle a {
   transition: all 200ms linear;
-  color: #fcc75b; }
+  color: #EAF1DA; }
 
 nav li.circle:hover a {
+  color: white; }
+
+div.card-container {
+  width: 20em;
+  height: 6em;
+  box-shadow: 1px 1px 1px black;
+  box-style: border-box; }
+
+.card-container div.backsplash {
+  position: absolute;
+  top: 3em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #413E4A; }
+
+.card-container div.portrait-container {
+  position: absolute;
+  left: 1em;
+  bottom: 2em;
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  background-color: #B38184; }
+
+.portrait-container .name {
+  color: white; }
+
+.card-container div.info-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 6em;
+  height: 3em; }
+
+.info-container .points {
   color: white; }

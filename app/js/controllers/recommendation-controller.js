@@ -8,7 +8,7 @@ module.exports = function(app){
     function($scope, $http, $routeParams) {
 
       $scope.msgs = [];
-      $scope.member = null;
+      $scope.user = null;
       $scope.receiverTransactions = null;
       $scope.stats = {};
 
@@ -19,7 +19,7 @@ module.exports = function(app){
       $scope.getMember = function (id) {
         $http.get('/members/' + id)
           .success(function (data) {
-            $scope.member = data.member;
+            $scope.user = data.member;
             $scope.receiverTransactions = data.receiverTransactions;
             $scope.recommend();
           })

@@ -1,10 +1,15 @@
-$anchorBlue: #4183C4;
-$circleBlue: rgba(65,131,196,0.6);
-$circleBlueActive: rgba(65,131,196,0.8);
-$circleOrange: #fcc75b;
-$grey: #444;
+$linen: #E8DDCB;
+$gold: #CDB380;
+$teal: #036564;
+$midBlue: #033649;
+$darkBlue: #031634;
 
+$anchorBlue: $darkBlue;
+$circleBlue: rgba(3,22,52,0.6);
+$circleBlueActive: rgba(3,22,52,0.8);
+$circleOrange: $gold;
 
 @import "global.scss";
 @import "header.scss";
 @import "footer.scss";
+@import "cards.scss";

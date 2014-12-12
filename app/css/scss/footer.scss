@@ -5,7 +5,7 @@ nav ul{
 
 nav li.circle{
   transition: all 200ms linear;
-  background-color:$circleBlue;
+  background-color:rgba(35, 68, 64, .6);
   height:4em;
   width:4em;
   border-radius:2em;
@@ -14,12 +14,11 @@ nav li.circle{
   margin:-5px auto;}
 
   nav li.circle:hover{
-    background-color:$circleBlueActive;
-  }
+    background-color:rgba(35, 68, 64, .85); }
 
 nav li.circle a{
   transition: all 200ms linear;
-  color:$circleOrange;}
+  color:#EAF1DA;}
 
   nav li.circle:hover a{
     color:white;
