@@ -4,19 +4,16 @@ var _ = require('lodash');
 
 module.exports = function(app){
 
-  app.controller('transactionController', ['$scope', '$http', 
-    function($scope, $http) {
+  app.controller('transactionController', 
+    ['$scope', '$http', 'transactionServer',
+    function($scope, $http, trxServer) {
 
       $scope.transactions = {};
+      
       $scope.getAllTransactions = function () {
-        $http.get('/transactions')
-          .success(function (data) {
-            $scope.transactions = _.sortBy(data, 'startedAt');
-          })
-          .error(function (data) {
-            console.log('error fetching transactions');
-            console.log(data);
-          });
+        trxServer.collection().success(function (data) {
+          $scope.transactions = _.sortBy(data, 'startedAt');
+        });
       };
 
       $scope.getAllTransactions();

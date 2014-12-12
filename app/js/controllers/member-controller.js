@@ -4,22 +4,20 @@ var _ = require('lodash');
 
 module.exports = function(app){
 
-  app.controller('memberController', ['$scope', '$http',
-    function($scope, $http) {
+  app.controller('memberController', 
+    ['$scope', '$http', 'memberServer',
+    function($scope, $http, memberServer) {
+
+      $scope.members = {};
 
       /*
        *  Methods
        */
 
       $scope.getAllMembers = function () {
-        $http.get('/members')
-          .success(function (data) {
-            $scope.members = _.sortBy(data, 'memberId');
-          })
-          .error(function (data) {
-            console.log('error fetching members');
-            console.log(data);
-          });
+        memberServer.collection().success(function (data) {
+          $scope.members = _.sortBy(data, 'memberId');
+        });
       };
 
 

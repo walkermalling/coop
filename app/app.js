@@ -14,6 +14,7 @@ var coop = angular.module('coop', ['ngRoute']);
 // Services
 
 require('./js/services/member-server')(coop);
+require('./js/services/transaction-server')(coop);
 
 // Controllers
 

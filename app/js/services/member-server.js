@@ -6,7 +6,7 @@ module.exports = function(app) {
     return {
       collection: function () {
         return $http.get('/members')
-          .error(function (data) {
+          .error(function (data, status) {
             console.log('error fetching members');
             console.log(data);
             console.log(status);
