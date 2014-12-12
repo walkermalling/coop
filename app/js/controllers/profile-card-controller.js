@@ -4,10 +4,18 @@
 
 module.exports = function(app){
 
-  app.controller('profileCardController', ['$scope',  
-    function($scope) {
+  app.controller('profileCardController', 
+    ['$scope', '$routeParams', 'memberServer',
+    function($scope, $routeParams, memberServer) {
 
-      console.log($scope);
+      $scope.getMember = function (id) {
+        memberServer.getOne(id).success(function (data) {
+          $scope.user = data.member;
+          $scope.user.trxs = data.receiverTransactions;
+        });
+      };
+
+      if ( $routeParams.id ) $scope.getMember($routeParams.id);
 
     }
   ]);

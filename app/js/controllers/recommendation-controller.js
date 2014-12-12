@@ -5,8 +5,8 @@ var _ = require('lodash');
 module.exports = function(app){
 
   app.controller('recommendationController', 
-    ['$scope', '$http', '$routeParams', 'memberServer',
-    function($scope, $http, $routeParams, memberServer) {
+    ['$scope', '$routeParams', 'memberServer',
+    function($scope, $routeParams, memberServer) {
 
       $scope.user = null;
       $scope.receiverTransactions = null;
