@@ -23,12 +23,14 @@ require('./js/controllers/transaction-controller')(coop);
 require('./js/controllers/member-controller')(coop);
 require('./js/controllers/recommendation-controller')(coop);
 require('./js/controllers/profile-card-controller')(coop);
+require('./js/controllers/recommendation-card-controller')(coop);
 
 // Directives
 
 require('./js/directives/footer-directive')(coop);
 require('./js/directives/header-directive')(coop);
 require('./js/directives/profile-card-directive')(coop);
+require('./js/directives/recommendation-card-directive')(coop);
 
 // Routes
 

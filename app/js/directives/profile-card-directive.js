@@ -7,9 +7,7 @@ module.exports = function(app){
       restrict: 'E',
       templateUrl: 'templates/profile-card-template.html',
       controller: 'profileCardController',
-      scope: {
-        
-      }
+      scope: {}
     };
   });
 
