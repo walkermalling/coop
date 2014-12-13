@@ -37,6 +37,7 @@ module.exports = function(grunt) {
         cwd: 'app/',
         src: [
           '*.html',
+          'assets/*.*',
           'css/*.css',
           'views/*.html',
           'templates/*.html'

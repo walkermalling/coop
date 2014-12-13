@@ -8,6 +8,8 @@ module.exports = function(app){
     ['$scope', '$routeParams', 'memberServer', '$q',
     function($scope, $routeParams, memberServer, $q) {
 
+      // scope is isolate
+
       $scope.user = {};
 
       /**
@@ -27,10 +29,9 @@ module.exports = function(app){
         });
 
         promiseUser.then(function (user) {
-          // var deferredRec = $q.defer();
+
           var recs = user.stats.recommendations;
           var sortable = [];
-          // var promiseRec = deferredRec.promise;
           
           for (var key in recs) {
             sortable.push({'id':key,'rating': recs[key]});
@@ -38,15 +39,9 @@ module.exports = function(app){
 
           var sorted = _.sortBy(sortable, 'rating');
 
-          console.log(sorted);
-
           memberServer.getOne(sorted[sorted.length-1].id)
             .success(function (data) {
-              
               $scope.user.recommendedProvider = data.member;
-
-              console.log($scope.user);
-              // deferredRec.resolve(0);
             });
         });
       }
