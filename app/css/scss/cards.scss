@@ -1,7 +1,7 @@
 div.card-container{
   width: 20em;
   height:6em;
-  margin:2em auto;
+  margin:2em auto 0 auto;
   box-style: border-box;}
 
 .card-container div.backsplash{
@@ -38,10 +38,25 @@ div.card-container{
   bottom:0;
   right:0;
   left:6em;
-  height:3em;}
+  height:4.25em;}
 
   .info-container .points{
     color:white;}
 
+div.stats-wrapper{
+  height:0;
+  width:100%;
+  overflow: hidden;
+  background:#73626E;
+  color:white;
+  font-size:.9em;
+  transition: all 200ms ease-in-out;}
 
+  div.stats-wrapper.active{
+    height:auto;}
 
+  .stats-wrapper div.stats{
+    box-sizing:border-box;
+    padding:1em;
+    width:100%;
+    height:auto;}

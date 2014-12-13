@@ -2,11 +2,7 @@
 
 module.exports = function(app){
 
-  app.controller('homeController', ['$scope', function($scope) {
+  app.controller('homeController', function() {
 
-    $scope.dummydata = {
-      'test' : 'asdlkfjasldkfj'
-    };
-
-  }]);
+  });
 };

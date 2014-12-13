@@ -13,6 +13,15 @@
   <div class="info-container">
     <div class="name">Name: {{ user.name}}</div>
     <div class="points">Points: {{ user.stats.points }}</div>
+    <a data-ng-click="extras.show = !extras.show">more</a>
   </div>
 
+</div>
+
+<div class="stats-wrapper {{ extras.show ? 'active' : ''}}">
+  <div class="stats">
+    <p>Provided sitting services {{ user.stats.providerInstances }} times.</p>
+    <p>Received sitting services {{ user.stats.receiverInstances }} times.</p>
+    <p>Most recent: {{ user.mostRecent.date | date : 'medium' }}, ProviderId: {{ user.mostRecent.sittingProviderId }}</p>
+  </div>
 </div>

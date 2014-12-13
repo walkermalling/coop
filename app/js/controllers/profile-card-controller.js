@@ -1,6 +1,6 @@
 'use strict';
 
-// var _ = require('lodash');
+var _ = require('lodash');
 
 module.exports = function(app){
 
@@ -8,10 +8,15 @@ module.exports = function(app){
     ['$scope', '$routeParams', 'memberServer',
     function($scope, $routeParams, memberServer) {
 
+      $scope.extras = {'show' : false};
+
       $scope.getMember = function (id) {
         memberServer.getOne(id).success(function (data) {
           $scope.user = data.member;
           $scope.user.trxs = data.receiverTransactions;
+          $scope.user.mostRecent = _.sortBy($scope.user.trxs, 'startedAt')[$scope.user.trxs.length - 1];
+          $scope.user.mostRecent.date = new Date($scope.user.mostRecent.startedAt);
+          console.log($scope.user.mostRecent);
         });
       };
 

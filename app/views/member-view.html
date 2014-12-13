@@ -1,6 +1,49 @@
 <main>
-  <h2>Members</h2>
-  <div data-ng-repeat="member in members">
-    <p><a href="/#/members/{{ member.memberId }}">{{ member.memberId }} </a> ({{member.stats.points}})</p>
+  <h2>Roster</h2>
+  <div class="member-card" data-ng-repeat="member in members">
+    <p><a href="/#/members/{{ member.memberId }}">{{ member.name }} ({{member.memberId}})</a></p>
+
+    <p>Points</p>
+    <p>{{member.stats.points}}</p>
+
+    <p>Ratings</p>
+    <p>
+      <span class="rating-tuple" data-ng-repeat="(id, rating) in member.stats.ratings">
+        {{ id }} : <span class="rating-value">{{rating}}</span>
+      </span>
+    </p>
+
+    <p>Recs</p>
+    <p>
+      <span class="rating-tuple" data-ng-repeat="(id, rating) in member.stats.recommendations">
+        {{ id }} : <span class="rating-value">{{ rating }}</span>
+      </span>
+    </p>
+
   </div>
 </main>
+
+<style type="text/css">
+
+  .member-card{
+    width:100%;
+    background:#413E4A;
+    color:white;
+    padding:1em;
+    margin:1em auto;
+    border-radius:2px;
+    box-sizing:border-box;}
+
+    .member-card a{
+      color: #F0B49E;}
+
+  .member-card p span.rating-tuple{
+    background-color:#73626E;
+    padding:0 .25em;
+    margin-right:.25em;
+    border-radius:2px;  }
+  .member-card p span.rating-value{
+    color:#F7E4BE;  }
+
+
+</style>

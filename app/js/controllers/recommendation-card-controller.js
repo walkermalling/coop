@@ -11,6 +11,8 @@ module.exports = function(app){
       // scope is isolate
 
       $scope.user = {};
+      $scope.extras = {'show' : false};
+
 
       /**
        *  Execute

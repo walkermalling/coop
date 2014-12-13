@@ -50,10 +50,13 @@ div{
   position:relative;}
 
 main{
-  width:100%;
+  width:40em;
   margin:0 auto;
   box-sizing:border-box;
   border:0;
   padding:1em;
   min-height:5em;}
 
+  main h3{
+  margin:1em auto;
+  text-align: left;}

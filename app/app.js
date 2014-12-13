@@ -39,7 +39,7 @@ coop.config([ '$routeProvider', '$locationProvider',
     $routeProvider
       .when('/', {
         templateUrl: 'views/home-view.html',
-        controller: 'recommendationController'
+        controller: 'homeController'
       })
       .when('/activity', {
         templateUrl: 'views/transaction-view.html',
