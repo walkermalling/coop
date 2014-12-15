@@ -216,7 +216,16 @@ main.recommendation {
 .member-card p span.value {
   color: #F7E4BE; }
 
+.member-card p span.underline {
+  text-decoration: underline; }
+
 div.sort a {
   display: inline-block;
   padding: 0 0.5em 0 0;
   color: #B38184; }
+
+div.sort a.ascending {
+  color: #73626E; }
+
+div.sort a.descending {
+  color: #F0B49E; }
