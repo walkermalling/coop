@@ -13,6 +13,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-mocha');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-karma');
 
   var allJavaScriptFilePaths = [
     'app/js/**/*.js',
@@ -65,6 +66,14 @@ module.exports = function(grunt) {
           'app/app.js'
         ],
         dest: 'build/scripts.js'
+      },
+      angulartest: {
+        options: {
+          transform: ['debowerify'],
+          debug: true
+        },
+        src: ['test/angular/**/*test.js'],
+        dest: 'test/angular-testbundle.js'
       }
     },
 
@@ -80,6 +89,17 @@ module.exports = function(grunt) {
       all: {
         src: ['test/mocha/**/*.js']
       }
+    },
+
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      },
+      continuous: {
+        configFile: 'karma.conf.js',
+        singleRun: true,
+        browsers: [ 'PhantomJS' ]
+      },
     },
 
     express: {
@@ -140,7 +160,13 @@ module.exports = function(grunt) {
       'browserify:dev',
       'sass:build',
       'copy:dev',
-      'simplemocha'
+      'simplemocha',
+      
+    ]);
+
+  grunt.registerTask('angular-test', [
+    'browserify:angulartest',
+    'karma:unit'
     ]);
 
   grunt.registerTask('serve',[
