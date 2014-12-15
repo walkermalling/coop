@@ -1,6 +1,42 @@
-<main class="recommendation">
+<main class="home">
 
-  <h3>About this Demo</h3>
-  <p>This demo </p>
+  <h3>Overview:</h3>
+
+  <p>My solution to the Coop scenario parses the transactions.xml logs and creates a transactions collection and a members collection in Mongo:<p>
+
+  <p><span>node lib/restore-db</span></p>
+
+  <p>Then two further scripts infer ratings for each member of the coop based on their transactions (the more frequently a member uses a provider, the higher that provider is rated), and generate recommendations based on ratings of members who had similar transaction records.  Ratings are cast into a 5-point scale, anticipating a future web-app ui.</p>
+
+  <p><span>node lib/generate-ratings</span></p>
+  <p><span>node lib/generate-recs</span></p>
+
+  <p>The recommendation engine employs a version of the <a href="http://en.wikipedia.org/wiki/Slope_One" target="_blank">Slope One</a> collaborative filtering algorithm. </p>
+
+  <p>The Angular application presents the the results of the recommendation engine with some additional sorting features.</p>
+  <p>The <a href="/#/members">Roster</a> lists all the coop members along with some statistics and the generated ratings and recommendation-ratings; these are enumerated by member Id, not on ranking.</p>
+  <p>Click on a coop member and it will retrieve the top recommendation</p>
+  <p>The <a href="/#/transactions">Activity</a> page simply lists all the transactions retrieved from the xml log.</p>
+
+  <h3>Stack:</h3>
+  <ul>
+    <li>Node</li>
+    <li>Express</li>
+    <li>Mongo with Mongoose</li>
+    <li>Angular</li>
+  </ul>
+
+
+  <h3>Testing:</h3>
+  <ul>
+    <li>Mocha</li>
+    <li>Karma</li>
+  </ul>
+
+  <h3>Automation:</h3>
+  <ul>
+    <li>Grunt</li>
+  </ul>
 
 </main>
+

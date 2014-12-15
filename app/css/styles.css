@@ -86,6 +86,20 @@ table td {
 table tr:nth-child(even) td {
   background: #F7E4BE; }
 
+main.home p {
+  padding: 0.3em 0; }
+
+main.home p span {
+  color: #73626E;
+  background: #c9c5bd;
+  padding: 0.25em 1em;
+  border-radius: 2px;
+  font-family: Courier, monospace; }
+
+main.home ul {
+  list-style-type: circle;
+  list-style-position: inside; }
+
 header {
   text-align: center;
   overflow: hidden; }

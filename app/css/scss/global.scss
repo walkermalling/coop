@@ -73,3 +73,20 @@ table td{
 
 table tr:nth-child(even) td{
   background: $cream;}
+
+main.home p {
+  padding:.3em 0;
+}
+
+main.home p span{
+  color:$dusk;
+  background:#c9c5bd;
+  padding:.25em 1em;
+  border-radius:2px;
+  font-family:Courier, monospace;
+}
+
+main.home ul{
+  list-style-type:circle;
+  list-style-position: inside;
+}

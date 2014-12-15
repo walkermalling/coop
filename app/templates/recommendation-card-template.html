@@ -13,16 +13,6 @@
   <div class="info-container">
     <div class="name">Name: {{ user.recommendedProvider.name}}</div>
     <div class="points">Points: {{ user.recommendedProvider.stats.points }}</div>
-    <a data-ng-click="extras.show = !extras.show">more</a>
   </div>
 
-</div>
-
-<div class="stats-wrapper {{ extras.show ? 'active' : ''}}">
-  <div class="stats">
-    <p>We recommend {{user.recommendedProvider.name}} based on your own ratings.</p>
-    <p>{{ user.recommendedProvider.name}} has...</p>
-    <p>Provided sitting services {{ user.recommendedProvider.stats.providerInstances }} times.</p>
-    <p>Received sitting services {{ user.recommendedProvider.stats.receiverInstances }} times.</p>
-  </div>
 </div>
