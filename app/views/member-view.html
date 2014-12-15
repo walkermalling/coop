@@ -1,24 +1,40 @@
 <main>
+
   <h2>Roster</h2>
+  
+  <div class="sort">
+    <span>Rank By: </span>
+    <a data-ng-click="sort('memberId')">Id</a>
+    <a data-ng-click="sort('points')">Points</a>
+    <a data-ng-click="sort('providerInstances')">Provider Activity</a>
+    <a data-ng-click="sort('receiverInstances')">Receiver Activity</a>
+    <a data-ng-click="sort('name')">Name</a>    
+  </div>
+    
+
   <div class="member-card" data-ng-repeat="member in members">
     <p><a href="/#/members/{{ member.memberId }}" class="name">{{ member.name }} </a>({{member.memberId}})</p>
 
-    <p>Points</p>
-    <p>{{member.stats.points}}</p>
+    <p><span class="value">{{member.stats.points}}</span> points</p>
+    
+    <p><span class="value">{{member.stats.providerInstances}}</span> provider instances</p>
+    
+    <p><span class="value">{{member.stats.receiverInstances}}</span> receiver instances</p>
 
-    <p>Ratings</p>
+    <p><span class="underline">Ratings</span></p>
     <p>
       <span class="rating-tuple" data-ng-repeat="(id, rating) in member.stats.ratings">
-        {{ id }} : <span class="rating-value">{{rating}}</span>
+        {{ id }} : <span class="value">{{rating}}</span>
       </span>
     </p>
 
-    <p>Recs</p>
+    <p><span class="underline">Recommendations</span></p>
     <p>
       <span class="rating-tuple" data-ng-repeat="(id, rating) in member.stats.recommendations">
-        {{ id }} : <span class="rating-value">{{ rating }}</span>
+        {{ id }} : <span class="value">{{ rating }}</span>
       </span>
     </p>
 
   </div>
+
 </main>

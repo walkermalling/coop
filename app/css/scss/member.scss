@@ -10,6 +10,11 @@
     .member-card a{
       color: #F0B49E;}
 
+  .member-card p {
+    padding:0 0 1em 0;
+  }
+
+
   .member-card p a.name{
     font-size:1.5em;
     display:inline-block;
@@ -21,5 +26,20 @@
     padding:0 .25em;
     margin-right:.25em;
     border-radius:2px;  }
-  .member-card p span.rating-value{
+  
+  .member-card p span.value{
     color:$cardTextEmphasis;  }
+
+  .member-card p span.underline{
+    text-decoration: underline; }
+
+  div.sort a{
+    display:inline-block;
+    padding:0 0.5em 0 0;
+    color:$rose;}
+
+    div.sort a.ascending{
+      color:$dusk;}
+
+    div.sort a.descending{
+      color:$orange; }
