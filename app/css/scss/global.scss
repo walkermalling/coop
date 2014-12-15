@@ -4,25 +4,27 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-weight:normal;
-  color: #161519;
-  background-color: #f9f3e5;
+  color: $text;
+  background-color: $background;
   margin: 0; }
 
 a {
   text-decoration: none;
-  color: $anchorBlue; }
+  color: $darkAnchor; }
 
 a:hover {
   cursor: pointer; }
 
 h1, h2, h3 {
-  text-align: center;
   font-weight:normal; 
   margin: 0;}
 
 h1 {
   font-size: 2em; 
-  color: #444;}
+  color: $grey;}
+
+h2, h3 {
+  text-align:left;}
 
 p {
   font-size: 1em;
@@ -58,5 +60,16 @@ main{
   min-height:5em;}
 
   main h3{
-  margin:1em auto;
+  margin:1em auto;}
+
+table{
   text-align: left;}
+
+table th{
+  color:$rose;}
+
+table td{
+  padding-right:1em;}
+
+table tr:nth-child(even) td{
+  background: $cream;}

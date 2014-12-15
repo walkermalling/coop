@@ -11,7 +11,7 @@ div.card-container{
   right:0;
   bottom:0;
   z-index:0;
-  background-color: #413E4A;}
+  background-color: $cardBackground;}
 
 .card-container div.portrait-container{
   position:absolute;
@@ -20,35 +20,34 @@ div.card-container{
   width:5em;
   height:5em;
   border-radius:2.5em;
-  background-color:#B38184;
+  background-color:$portraitBackground;
   overflow:hidden;}
 
   .portrait-container .portrait svg{
     width:5em;
     height:5em;
-    padding-top:.5em;
-  }
+    padding-top:.5em;}
 
   .portrait-container .name{
-    color:white;}
+    color:$cardText;}
 
 .card-container div.info-container{
   position:absolute;
-  color:white;
+  color:$cardText;
   bottom:0;
   right:0;
   left:6em;
   height:4.25em;}
 
   .info-container .points{
-    color:white;}
+    color:$cardText;}
 
 div.stats-wrapper{
   height:0;
   width:100%;
   overflow: hidden;
-  background:#73626E;
-  color:white;
+  background:$cardBackgroundSpotlight;
+  color:$cardText;
   font-size:.9em;
   transition: all 200ms ease-in-out;}
 

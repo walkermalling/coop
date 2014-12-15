@@ -1,13 +1,47 @@
-$linen: #E8DDCB;
-$gold: #CDB380;
-$teal: #036564;
-$midBlue: #033649;
-$darkBlue: #031634;
+/*
+ *  Main Palette Scale
+ */
 
-$anchorBlue: $darkBlue;
-$circleBlue: rgba(3,22,52,0.6);
-$circleBlueActive: rgba(3,22,52,0.8);
-$circleOrange: $gold;
+$darkest: #413E4A;
+$dusk: #73626E;
+$rose: #B38184;
+$orange: #F0B49E;
+$cream: #F7E4BE;
+
+
+/*
+ *  Additions
+ */
+
+$champagne: #f9f3e5;
+$midnight: #161519;
+$teal: #036564;
+$weakTea: EAF1DA;
+$grey: #444;
+
+/*
+ *  Assignments
+ */
+
+
+$cardBackground: $darkest;
+$cardBackgroundSpotlight: $dusk;
+$cardText: #fff;
+$cardTextEmphasis: $cream;
+
+$portraitBackground: $rose;
+
+$background: $champagne;
+$text: $midnight;
+$darkAnchor: #111;
+
+$circleAnchor: $weakTea;
+$circleBackground: rgba(35, 68, 64, .6);
+$circleBackgroundActive: rgba(35, 68, 64, .85);
+
+/*
+ *  Import
+ */
 
 @import "global.scss";
 @import "header.scss";

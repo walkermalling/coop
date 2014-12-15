@@ -1,6 +1,6 @@
   .member-card{
     width:100%;
-    background:#413E4A;
+    background: $cardBackground;
     color:white;
     padding:1em;
     margin:1em auto;
@@ -10,10 +10,16 @@
     .member-card a{
       color: #F0B49E;}
 
+  .member-card p a.name{
+    font-size:1.5em;
+    display:inline-block;
+    padding: 0 0.5em 1em 0;
+  }
+
   .member-card p span.rating-tuple{
-    background-color:#73626E;
+    background-color: $cardBackgroundSpotlight;
     padding:0 .25em;
     margin-right:.25em;
     border-radius:2px;  }
   .member-card p span.rating-value{
-    color:#F7E4BE;  }
+    color:$cardTextEmphasis;  }

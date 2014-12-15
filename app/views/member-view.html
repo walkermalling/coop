@@ -1,7 +1,7 @@
 <main>
   <h2>Roster</h2>
   <div class="member-card" data-ng-repeat="member in members">
-    <p><a href="/#/members/{{ member.memberId }}">{{ member.name }} ({{member.memberId}})</a></p>
+    <p><a href="/#/members/{{ member.memberId }}" class="name">{{ member.name }} </a>({{member.memberId}})</p>
 
     <p>Points</p>
     <p>{{member.stats.points}}</p>
