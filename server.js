@@ -28,6 +28,6 @@ require('./routes/member-routes')(app);
 
 // start server
 
-server.listen(app.get('port'),function(){
+server.listen(app.get('port'), function () {
   console.log('Sever started on ' + app.get('port'));
 });

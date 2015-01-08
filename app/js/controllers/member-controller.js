@@ -2,11 +2,11 @@
 
 var _ = require('lodash');
 
-module.exports = function(app){
+module.exports = function (app) {
 
   app.controller('memberController', 
     ['$scope', '$http', 'memberServer',
-    function($scope, $http, memberServer) {
+    function ($scope, $http, memberServer) {
 
       $scope.members = {};
       var sortKey;

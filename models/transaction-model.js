@@ -12,11 +12,11 @@ var TransactionSchema = mongoose.Schema({
   createdAt: {type:Date, default:Date.now}
 });
 
-TransactionSchema.methods.pointValue = function(){
+TransactionSchema.methods.pointValue = function () {
   return this.childrenWatched * this.duration;
 };
 
-TransactionSchema.howLongAgo = function(){
+TransactionSchema.howLongAgo = function () {
   var now = new Date();
   return now - this.startedAt;
 };

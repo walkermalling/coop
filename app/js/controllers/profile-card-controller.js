@@ -2,11 +2,11 @@
 
 var _ = require('lodash');
 
-module.exports = function(app){
+module.exports = function (app) {
 
   app.controller('profileCardController', 
     ['$scope', '$routeParams', 'memberServer',
-    function($scope, $routeParams, memberServer) {
+    function ($scope, $routeParams, memberServer) {
 
       $scope.extras = {'show' : false};
 
@@ -20,7 +20,7 @@ module.exports = function(app){
         });
       };
 
-      if ( $routeParams.id ) $scope.getMember($routeParams.id);
+      if ($routeParams.id) $scope.getMember($routeParams.id);
 
     }
   ]);

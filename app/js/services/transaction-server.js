@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = function(app) {
-  app.factory('transactionServer', function($http) {
+module.exports = function (app) {
+  app.factory('transactionServer', function ($http) {
   
     return {
       collection: function () {

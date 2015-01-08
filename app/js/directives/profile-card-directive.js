@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function(app){
+module.exports = function (app) {
 
-  app.directive('profileCard', function() {
+  app.directive('profileCard', function () {
     return {
       restrict: 'E',
       templateUrl: 'templates/profile-card-template.html',

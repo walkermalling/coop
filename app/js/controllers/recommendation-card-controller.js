@@ -2,11 +2,11 @@
 
 var _ = require('lodash');
 
-module.exports = function(app){
+module.exports = function (app) {
 
   app.controller('recommendationCardController', 
     ['$scope', '$routeParams', 'memberServer', '$q',
-    function($scope, $routeParams, memberServer, $q) {
+    function ($scope, $routeParams, memberServer, $q) {
 
       // scope is isolate
 
@@ -18,7 +18,7 @@ module.exports = function(app){
        *  Execute
        */
 
-      if ( $routeParams.id ) {
+      if ($routeParams.id) {
 
         var deferredUser = $q.defer();
         var promiseUser = deferredUser.promise;
@@ -41,7 +41,7 @@ module.exports = function(app){
 
           var sorted = _.sortBy(sortable, 'rating');
 
-          memberServer.getOne(sorted[sorted.length-1].id)
+          memberServer.getOne(sorted[sorted.length - 1].id)
             .success(function (data) {
               $scope.user.recommendedProvider = data.member;
             });

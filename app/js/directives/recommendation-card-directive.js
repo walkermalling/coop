@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function(app){
+module.exports = function (app) {
 
-  app.directive('recommendationCard', function() {
+  app.directive('recommendationCard', function () {
     return {
       restrict: 'E',
       templateUrl: 'templates/recommendation-card-template.html',

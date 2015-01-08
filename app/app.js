@@ -35,7 +35,7 @@ require('./js/directives/recommendation-card-directive')(coop);
 // Routes
 
 coop.config([ '$routeProvider', '$locationProvider', 
-  function($routeProvider) {
+  function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home-view.html',
@@ -56,5 +56,5 @@ coop.config([ '$routeProvider', '$locationProvider',
       .otherwise({
         redirectTo: '/'
       });
-
-} ]);
+  } 
+]);
