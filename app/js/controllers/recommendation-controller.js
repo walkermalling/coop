@@ -2,11 +2,11 @@
 
 var _ = require('lodash');
 
-module.exports = function(app){
+module.exports = function (app) {
 
   app.controller('recommendationController', 
     ['$scope', '$routeParams', 'memberServer',
-    function($scope, $routeParams, memberServer) {
+    function ($scope, $routeParams, memberServer) {
 
       $scope.user = null;
       $scope.receiverTransactions = null;
@@ -39,7 +39,7 @@ module.exports = function(app){
        *  Execution
        */
       
-      if ( $routeParams.id ) $scope.getMember($routeParams.id);
+      if ($routeParams.id) $scope.getMember($routeParams.id);
 
     }
   ]);

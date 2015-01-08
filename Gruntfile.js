@@ -9,6 +9,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-express-server');
+  grunt.loadNpmTasks("grunt-jscs");
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-mocha');
@@ -52,6 +53,13 @@ module.exports = function(grunt) {
       all: allJavaScriptFilePaths,
       options: {
         jshintrc: true
+      }
+    },
+
+    jscs: {
+      src: allJavaScriptFilePaths,
+      options: {
+        config: ".jscsrc"
       }
     },
 
@@ -139,6 +147,7 @@ module.exports = function(grunt) {
   // register tasks
   grunt.registerTask('default', [
       'jshint',
+      'jscs',
       'clean:dev',
       'browserify:dev',
       'sass:build',
@@ -149,6 +158,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
       'jshint',
+      'jscs',
       'clean:dev',
       'browserify:dev',
       'sass:build',
@@ -160,8 +170,7 @@ module.exports = function(grunt) {
       'browserify:dev',
       'sass:build',
       'copy:dev',
-      'simplemocha',
-      
+      'simplemocha'
     ]);
 
   grunt.registerTask('angular-test', [

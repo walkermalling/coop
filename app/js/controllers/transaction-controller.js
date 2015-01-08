@@ -2,11 +2,11 @@
 
 var _ = require('lodash');
 
-module.exports = function(app){
+module.exports = function (app) {
 
   app.controller('transactionController', 
     ['$scope', '$http', 'transactionServer',
-    function($scope, $http, trxServer) {
+    function ($scope, $http, trxServer) {
 
       $scope.transactions = {};
       
