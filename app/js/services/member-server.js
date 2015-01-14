@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Define a service that issues requests for member data
+ */
+
 module.exports = function (app) {
   app.factory('memberServer', function ($http) {
   
