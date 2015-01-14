@@ -10,6 +10,8 @@ module.exports = function (app) {
 
       $scope.extras = {'show' : false};
 
+      // get the requested member and link it to the scope.user
+
       $scope.getMember = function (id) {
         memberServer.getOne(id).success(function (data) {
           $scope.user = data.member;

@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * Define a service that issues requests for transaction data
+ */
+
 module.exports = function (app) {
   app.factory('transactionServer', function ($http) {
   

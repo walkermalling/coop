@@ -11,8 +11,8 @@ module.exports = function (app) {
       $scope.members = {};
       var sortKey;
 
-      /*
-       *  Methods
+      /**
+       * Request the members collection
        */
 
       $scope.getAllMembers = function () {
@@ -22,6 +22,15 @@ module.exports = function (app) {
           indexify($scope.members);
         });
       };
+
+      /**
+       * Sort the members collection by a given field
+       *
+       * If the collection is already sorted by the requested field,
+       * reverse the sort
+       *
+       * Note: this is triggered in the view
+       */
 
       $scope.sort = function (field) {
         if (sortKey === field ) {
@@ -33,6 +42,11 @@ module.exports = function (app) {
         }
       };
 
+      /**
+       * Take the instance counts out of their 'stats' namespace
+       * so that they can serve as sortable indexes for the collection
+       */
+
       function indexify(collection) {
         collection.forEach(function (member) {
           member.points = member.stats.points;
@@ -41,13 +55,9 @@ module.exports = function (app) {
         });
       }
 
-
-      /*
-       *  Execution
-       */
+      // execute
       
       $scope.getAllMembers();
-
 
     }
   ]);
